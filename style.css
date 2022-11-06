@@ -1,0 +1,41 @@
+body{
+    background-color: #171717;
+}
+
+.box{
+    width:50px;
+    height:50px;
+    margin:5px;
+    border: 1px solid #da0037;
+}
+
+.grid{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.column{
+
+}
+
+.title{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: #ededed;
+    text-align: center;
+    font-size: xxx-large;
+    border-bottom: 0.5px solid #ededed;
+    /* text-underline-offset: rgb(182,182,182); */
+}
+
+.ball{
+    position:relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: yellow;
+    top: 10px;
+    margin: auto;
+}
