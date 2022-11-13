@@ -1,26 +1,25 @@
-class LL{
-    constructor(){
+// class LL{
+//     constructor(){
 
-    }
-}
+//     }
+// }
 const queue = [];
 
 const makeQueue = (i,color) => {
     
     // const l = new LL();
+    if(i%9!=0) queue.push(i-1);
     if(i+9<54) {
         // i ka color to all the balls of i+9
         queue.push(i+9);
     }
     if(i%9!=8) queue.push(i+1);
     if(i-9>-1) queue.push(i-9);
-    if(i%9!=0) queue.push(i-1);
     console.log(queue);
     // Pop the stack[i]
 
-    while(queue.length!=0){
-        addBall(queue[0]);
-        queue.shift();
+    while(queue.length){
+        addBall(queue.shift());
     }
 };
 

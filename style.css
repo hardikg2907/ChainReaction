@@ -7,6 +7,8 @@ body{
     height:50px;
     margin:5px;
     border: 1px solid #da0037;
+    padding:auto;
+    /* display: flex; */
 }
 
 .grid{
@@ -39,3 +41,32 @@ body{
     top: 10px;
     margin: auto;
 }
+/* .box2{
+    display: flex;
+    text-align: center; 
+}*/
+.box2{
+
+    /* &:first-child{
+    position: relative;
+    left:10px;
+    top:100px;
+    margin:auto;
+    } */
+
+    /* .ball:nth-child(2){
+        position: relative;
+        left:10px;
+        top:100px;
+        margin:auto;
+    } */
+}
+
+.ball:first-child{
+    /* left:30px; */
+}
+
+/* .ball:nth-child(2){
+    left:20px;
+} */
+
