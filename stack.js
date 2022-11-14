@@ -4,9 +4,13 @@ class Stack{
         this.stackTop=0;
     }
 
-    push(color) {
+    push(color,i) {
         this.stackTop++;
         this.color = color;
+        boxes[i].innerHTML = '';
+        let t=this.stackTop;
+        while(t--)
+            boxes[i].innerHTML += `<div class="ball" style="background-color:${color}"></div>`;
         // Change the color of the box to the stack top color
     }
 
