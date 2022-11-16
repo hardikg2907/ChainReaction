@@ -9,6 +9,7 @@ class Stack{
         this.color = color;
         boxes[i].innerHTML = '';
         let t=this.stackTop;
+        // console.log(this.color)
         while(t--)
             boxes[i].innerHTML += `<div class="ball" style="background-color:${color}"></div>`;
         // Change the color of the box to the stack top color
@@ -16,7 +17,9 @@ class Stack{
 
     pop() {
         this.stackTop=0;
-        return this.color;
+        let c = this.color;
+        this.color = '';
+        return c;
         // Change the color of the grid to neutral (empty grid color)
     }
 }

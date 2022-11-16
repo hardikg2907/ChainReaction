@@ -4,7 +4,7 @@ let boxes = document.querySelectorAll('.box');
 let count=[...Array(54).fill(0)];
 
 const addBall = async (i,color) =>{
-    // boxes[i].innerHTML += `<div class="ball" style="background-color:${color}"></div>`;
+
     boxStack = stackArr[i];
     // console.log("stack= ",stackArr);
     boxStack.push(color,i);
@@ -17,6 +17,7 @@ const addBall = async (i,color) =>{
             boxes[i].innerHTML = ``;
             // count[i]=0;
             // boxes.classList=['box'];
+            
             makeQueue(i,boxStack.pop());
         }
     // },100);

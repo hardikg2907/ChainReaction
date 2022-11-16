@@ -1,8 +1,3 @@
-// class LL{
-//     constructor(){
-
-//     }
-// }
 const queue = [];
 
 const makeQueue = (i,color) => {
@@ -19,7 +14,7 @@ const makeQueue = (i,color) => {
     // Pop the stack[i]
 
     while(queue.length){
-        addBall(queue.shift());
+        addBall(queue.shift(),color);
     }
 };
 
