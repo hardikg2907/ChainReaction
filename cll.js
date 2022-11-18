@@ -81,9 +81,13 @@ const updateNobc = ()=> {
     }
 }
 
+let nextColor='yellow';
 
 // node = cll.head;
 const playerTurn = async ()=>{
+    nextColor=colors[(turns+1)%cll.count];
+    if(cll.count===1) nextColor=colors[0];
+    for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;
     let node = cll.head;
     let t = turns%cll.count;
     while(t--) {
@@ -92,18 +96,22 @@ const playerTurn = async ()=>{
     if(cll.count!=1){
         let currentColor=getColor();
         turns++;
+        console.log(nextColor)
+        // for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;
         // Player selects the box
         // Box operations (Can't select box of other color)
         // Selected box operations (Changing color of neighboring boxes)
         // Reevaluate the nobc of every player
         updateNobc();
         if(turns>colors.length){
-            for(let i=0;i<cll.count;i++){
-                console.log(nobc.indexOf(0));
+            let temp=cll.count;
+            for(let i=0;i<temp;i++){
+                // console.log("0 Nobc: "+nobc.indexOf(0));
                 cll.removeAt(nobc.indexOf(0));
                 turns = cll.count+1+colors.indexOf(currentColor);
             }
         }
+
         // If (turns<number of players) kn
         // Else remove players with nobc=0
         // Remove that particular color from colors array
@@ -114,17 +122,16 @@ const playerTurn = async ()=>{
     else{
         console.log('Winner',node.color)
     }
-
     // console.log(node.color);
 }
 
 const getColor = ()=>{
-    console.log("getcolor=",colors[turns%cll.count]);
+    // console.log("getcolor=",colors[turns%cll.count]);
     return colors[turns%cll.count];
 }
 
 cll.push('yellow')
-cll.push('red')
-cll.push('blue')
+// cll.push('red')
+// cll.push('blue')
+// cll.push('green')
 console.log('Working')
-// playerTurn();

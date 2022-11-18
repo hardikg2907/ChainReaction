@@ -10,7 +10,7 @@ const makeQueue = (i,color) => {
     }
     if(i%9!=8) queue.push(i+1);
     if(i-9>-1) queue.push(i-9);
-    console.log(queue);
+    // console.log(queue);
     // Pop the stack[i]
 
     while(queue.length){

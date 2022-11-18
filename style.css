@@ -5,8 +5,8 @@ body{
 .box{
     width:50px;
     height:50px;
-    margin:5px;
-    border: 1px solid #da0037;
+    margin:3px;
+    border: 1px solid;
     padding:auto;
     /* display: flex; */
 }
@@ -17,9 +17,9 @@ body{
     justify-content: center;
 }
 
-.column{
+/* .column{
 
-}
+} */
 
 .title{
     margin-top: 0px;
@@ -31,7 +31,7 @@ body{
     /* text-underline-offset: rgb(182,182,182); */
 }
 
-.ball{
+.ball,.ball1{
     position:relative;
     width: 20px;
     height: 20px;
@@ -41,32 +41,24 @@ body{
     top: 10px;
     margin: auto;
 }
-/* .box2{
-    display: flex;
-    text-align: center; 
-}*/
-.box2{
 
-    /* &:first-child{
-    position: relative;
-    left:10px;
-    top:100px;
-    margin:auto;
-    } */
+/* .ballcenter{
+    position:relative;
 
-    /* .ball:nth-child(2){
-        position: relative;
-        left:10px;
-        top:100px;
-        margin:auto;
-    } */
-}
-
-.ball:first-child{
-    /* left:30px; */
-}
-
-/* .ball:nth-child(2){
-    left:20px;
 } */
 
+.ball2:first-child{
+    margin:0;
+    padding:0;
+    /* position:inherit; */
+    /* top: 10px; */
+    left:10px;
+}
+
+.ball2:nth-child(2){
+    margin:0;
+    padding:0;
+    /* position: inherit; */
+    /* top: 10px; */
+    right: 10px;
+}

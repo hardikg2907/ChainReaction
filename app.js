@@ -2,6 +2,7 @@ const grid = document.querySelector('.grid');
 // const columns = document.querySelectorAll('.column');
 let boxes = document.querySelectorAll('.box');
 let count=[...Array(54).fill(0)];
+document.addEventListener('DOMContentLoaded',()=>{for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;})
 
 const addBall = async (i,color) =>{
 

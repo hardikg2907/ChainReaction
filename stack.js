@@ -11,7 +11,7 @@ class Stack{
         let t=this.stackTop;
         // console.log(this.color)
         while(t--)
-            boxes[i].innerHTML += `<div class="ball" style="background-color:${color}"></div>`;
+            boxes[i].innerHTML += `<div class="ball ball${this.stackTop}" style="background-color:${color}"></div>`;
         // Change the color of the box to the stack top color
     }
 
