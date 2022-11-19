@@ -14,7 +14,7 @@ const makeQueue = (i,color) => {
     // Pop the stack[i]
 
     while(queue.length){
-        addBall(queue.shift(),color);
+        addBall(queue.shift(),color);    
     }
 };
 

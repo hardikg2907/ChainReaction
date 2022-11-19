@@ -3,6 +3,7 @@ const grid = document.querySelector('.grid');
 let boxes = document.querySelectorAll('.box');
 const list = document.querySelectorAll('li');
 const btn = document.querySelector('#okay');
+const winScreen = document.querySelector('.winner-screen');
 let numOfPlayers=0;
 let count=[...Array(54).fill(0)];
 document.addEventListener('DOMContentLoaded',()=>{for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;})
@@ -13,25 +14,19 @@ const addBall = async (i,color) =>{
     // console.log("stack= ",stackArr);
     boxStack.push(color,i);
 
+    for(let j=0;j<10000;j++)
+    {
+        for(let k=0;k<10000;k++);
+    }
     // setTimeout(()=>{
         if(boxStack.size===boxStack.stackTop){
             // console.log('Executed');
-            boxes[i].innerHTML = ``;
-            // count[i]=0;
-            // boxes.classList=['box'];
-            
+            boxes[i].innerHTML = ``;            
             makeQueue(i,boxStack.pop());
         }
     // },100);
     
     // console.log(boxStack.stackTop);
-    
-    // obj[`${i}`]++;
-    // console.log(obj);
-}
-
-const removeBall = (i) =>{
-
 }
 
 boxes.forEach((box,i)=>{
@@ -56,15 +51,15 @@ boxes.forEach((box,i)=>{
 
 const check = (id)=>{
     console.log(id);
-    for(let i=2;i<=4;i++)
+    for(let i=2;i<=6;i++)
     {   
         let li = document.getElementById(i);
-        if(i!=id) li.style="background-color: none";
-        else li.style="background-color: #ededed";
+        if(i!=id) li.style="background-color: none; color:#ededed;";
+        else li.style="background-color: #ededed; color:black;";
     }
 }
 
-list.forEach((li,i)=>{
+list.forEach((li)=>{
     li.addEventListener('click',()=>{
         if(li.id>=2){
             numOfPlayers = li.id;
@@ -80,7 +75,15 @@ btn.addEventListener('click',()=>{
         grid.style="display:flex";
 
         for(let i=0;i<numOfPlayers;i++){
-            cll.push(players.shift());
+            let player = players.shift();
+            playersUsed.push(player);
+            cll.push(player);
         }
+    }
+    else{
+        btn.classList.add('wrong');
+        setTimeout(()=>{
+            btn.classList.remove('wrong');
+        },500)
     }
 })

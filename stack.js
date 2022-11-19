@@ -10,8 +10,11 @@ class Stack{
         boxes[i].innerHTML = '';
         let t=this.stackTop;
         // console.log(this.color)
-        while(t--)
-            boxes[i].innerHTML += `<div class="ball ball${this.stackTop}" style="background-color:${color}"></div>`;
+        while(t--) {
+            if(this.stackTop==this.size-1) boxes[i].innerHTML += `<div class="ball ball${this.stackTop} maxBall" style="background-color:${color}"></div>`;
+            else if(this.stackTop==this.size-2) boxes[i].innerHTML += `<div class="ball ball${this.stackTop} medBall" style="background-color:${color}"></div>`;
+            else boxes[i].innerHTML += `<div class="ball ball${this.stackTop} minBall" style="background-color:${color}"></div>`;
+        }
         // Change the color of the box to the stack top color
     }
 
