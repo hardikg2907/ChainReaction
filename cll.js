@@ -105,7 +105,7 @@ const playerTurn = async ()=>{
     if(cll.count!=1){
         currentColor=getColor();
         turns++;
-        console.log(nextColor)
+        // console.log(nextColor)
         // for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;
         // Player selects the box
         // Box operations (Can't select box of other color)
@@ -147,4 +147,4 @@ const getColor = ()=>{
 
 let players = ['yellow','#da012d','#1560bd','#eaeaea','#fc6a03','#00A300'];
 let playersUsed = [];
-console.log('Working')
+// console.log('Working')

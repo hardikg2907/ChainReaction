@@ -50,7 +50,7 @@ boxes.forEach((box,i)=>{
 })
 
 const check = (id)=>{
-    console.log(id);
+    // console.log(id);
     for(let i=2;i<=6;i++)
     {   
         let li = document.getElementById(i);

@@ -76,20 +76,21 @@ a{
 }
 
 .player-options{
+    text-align: center;
     /* display: none; */
     font-family: 'Abel',sans-serif;
     /* right: 10px; */
     margin:auto;
-    width: 50%;
+    width: 30%;
     min-width: 20rem;
     height: auto;
 }
 
 .player-opt{
     margin: auto;
-    text-align: center;
+    /* text-align: center; */
     position: relative;
-    left: -2%;
+    left: -6%;
     list-style-type: none;
     top:10%;
 }
@@ -113,12 +114,9 @@ a{
 #okay{
     cursor: pointer;
     position:relative;
-    /* left: 30%; */
-    /* top:10%; */
     margin: auto;
-    width: 50%;
-    min-width:10rem;
-    margin-bottom: 20px;
+    width: 40%;
+    min-width: 20%;
     border: 1px solid black;
     border-radius: 10px;
     color: black;
@@ -159,8 +157,8 @@ a{
 
 .winner-screen{
     margin: auto;
-    width: 50%;
-    max-width: 30rem;
+    /* width: 50%; */
+    max-width: 20rem;
     /* height: 30rem; */
     position:relative;
     color: black;
@@ -185,5 +183,5 @@ a{
 }
 
 #button:hover{
-    background-color: #00A300;
+    background-color: rgb(94, 94, 94);
 }
