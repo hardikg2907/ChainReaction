@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid');
 // const columns = document.querySelectorAll('.column');
 let boxes = document.querySelectorAll('.box');
+const list = document.querySelectorAll('li');
+let numOfPlayers=0;
 let count=[...Array(54).fill(0)];
 document.addEventListener('DOMContentLoaded',()=>{for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;})
 
@@ -10,8 +12,6 @@ const addBall = async (i,color) =>{
     // console.log("stack= ",stackArr);
     boxStack.push(color,i);
 
-    // boxes.classList = ['box',`box${count[i]}`];
-    // boxes[i].classList.add(`box${count[i]}`)
     // setTimeout(()=>{
         if(boxStack.size===boxStack.stackTop){
             // console.log('Executed');
@@ -53,4 +53,16 @@ boxes.forEach((box,i)=>{
     })
 })
 
-
+list.forEach((li,i)=>{
+    li.addEventListener('click',()=>{
+        if(li.id=='okay' && numOfPlayers!==0){
+            document.querySelector('.player-options').style="display:none";
+            grid.style="display:flex";
+        }
+        else if(li.id!='okay'){
+            numOfPlayers = li.id;
+            li.style="background-color: #ededed";
+            document.getElementById('okay').style = "background-color:green";
+        }   
+    })
+})

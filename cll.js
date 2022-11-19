@@ -30,7 +30,6 @@ class CLL{
             node.next = this.head;
         }
         this.count++;
-        // return this;
     }
 
     removeAt(index){
@@ -81,6 +80,7 @@ const updateNobc = ()=> {
     }
 }
 
+let t = turns%cll.count;
 let nextColor='yellow';
 
 // node = cll.head;
@@ -89,7 +89,7 @@ const playerTurn = async ()=>{
     if(cll.count===1) nextColor=colors[0];
     for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;
     let node = cll.head;
-    let t = turns%cll.count;
+    // let t = turns%cll.count;
     while(t--) {
         node=node.next;
     }
@@ -108,7 +108,8 @@ const playerTurn = async ()=>{
             for(let i=0;i<temp;i++){
                 // console.log("0 Nobc: "+nobc.indexOf(0));
                 cll.removeAt(nobc.indexOf(0));
-                turns = cll.count+1+colors.indexOf(currentColor);
+                // turns = colors.length+1+colors.indexOf(currentColor);
+                turns = (turns+1)%cll.count;
             }
         }
 
@@ -131,7 +132,7 @@ const getColor = ()=>{
 }
 
 cll.push('yellow')
-// cll.push('red')
-// cll.push('blue')
-// cll.push('green')
+cll.push('red')
+cll.push('blue')
+cll.push('#eaeaea')
 console.log('Working')
