@@ -2,6 +2,7 @@ const grid = document.querySelector('.grid');
 // const columns = document.querySelectorAll('.column');
 let boxes = document.querySelectorAll('.box');
 const list = document.querySelectorAll('li');
+const btn = document.querySelector('#okay');
 let numOfPlayers=0;
 let count=[...Array(54).fill(0)];
 document.addEventListener('DOMContentLoaded',()=>{for(let i=0;i<54;i++) boxes[i].style=`border-color: ${nextColor}`;})
@@ -53,16 +54,33 @@ boxes.forEach((box,i)=>{
     })
 })
 
+const check = (id)=>{
+    console.log(id);
+    for(let i=2;i<=4;i++)
+    {   
+        let li = document.getElementById(i);
+        if(i!=id) li.style="background-color: none";
+        else li.style="background-color: #ededed";
+    }
+}
+
 list.forEach((li,i)=>{
     li.addEventListener('click',()=>{
-        if(li.id=='okay' && numOfPlayers!==0){
-            document.querySelector('.player-options').style="display:none";
-            grid.style="display:flex";
-        }
-        else if(li.id!='okay'){
+        if(li.id>=2){
             numOfPlayers = li.id;
-            li.style="background-color: #ededed";
+            check(li.id);
             document.getElementById('okay').style = "background-color:green";
         }   
     })
+})
+
+btn.addEventListener('click',()=>{
+    if(numOfPlayers!==0){
+        document.querySelector('.player-options').style="display:none";
+        grid.style="display:flex";
+
+        for(let i=0;i<numOfPlayers;i++){
+            cll.push(players.shift());
+        }
+    }
 })

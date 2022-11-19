@@ -61,12 +61,11 @@ body{
 .player-options{
     font-family: 'Abel',sans-serif;
     margin:auto;
-    border: 2px solid white;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    /* border: 2px solid white; */
+    /* border-radius: 15px; */
+    /* box-shadow: 2px 2px 2px 1px #ededed; */
     width: 40rem;
-    height: 20rem;
-    /* padding: auto; */
+    height: auto;
 }
 .player-opt{
     margin: auto;
@@ -77,6 +76,7 @@ body{
     top:10%;
 }
 .player-opt li{
+    cursor: pointer;
     width:auto;
     border: 1px solid #ededed;
     border-radius: 10px;
@@ -92,5 +92,20 @@ body{
 }
 
 #okay{
+    cursor: pointer;
+    position:relative;
+    left: 39%;
+    top:10%;
+    width:10rem;
+    margin-bottom: 20px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    color: rgb(59, 210, 220);
+    font-size: 3rem;
+    transition:background-color 0.7s linear;
     background-color: grey;
 }
+
+/* #okay:hover{
+    background-color: rgb(3, 164, 3);
+} */

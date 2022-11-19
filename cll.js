@@ -131,8 +131,9 @@ const getColor = ()=>{
     return colors[turns%cll.count];
 }
 
-cll.push('yellow')
-cll.push('red')
-cll.push('blue')
-cll.push('#eaeaea')
+// cll.push('yellow')
+// cll.push('red')
+// cll.push('blue')
+// cll.push('#eaeaea')
+let players = ['yellow','red','blue','#eaeaea'];
 console.log('Working')
